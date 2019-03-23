@@ -9,9 +9,8 @@ spring:
         max-idle: 200
         min-idle: 50
 
-    timeout: 2000
-    commandTimeout: 2000
-    max-attemps: 10
+    timeout: 100000
+    commandTimeout: 100000
 
     cluster:
       nodes: 192.168.118.133:7000,192.168.118.133:7001,192.168.118.133:7002,192.168.118.133:7003,192.168.118.133:7004,192.168.118.133:7005

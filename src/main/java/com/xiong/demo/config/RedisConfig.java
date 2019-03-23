@@ -37,9 +37,6 @@ public class RedisConfig {
     @Value("${spring.redis.commandTimeout}")
     private int commandTimeout;
 
-    @Value("${spring.redis.max-attempts}")
-    private int maxAttemps;
-
     @Value("${spring.redis.jedis.pool.max-active}")
     private int maxActive;
 
@@ -69,7 +66,7 @@ public class RedisConfig {
             pool.setMaxIdle(maxIdle);
             pool.setMaxWaitMillis(maxWaitMillis);
 
-            jedisCluster = new JedisCluster(nodes, commandTimeout, timeout, maxAttemps, password, pool);
+            jedisCluster = new JedisCluster(nodes, commandTimeout, timeout, 6, password, pool);
         }
         return jedisCluster;
     }
