@@ -3,13 +3,12 @@ server:
 
 spring:
   profiles:
-    include: datasource
+    include: datasource,redis
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   config-location: classpath:sqlmap-config.xml
   type-aliases-package: com.xiong.demo.entity
-
 
 #pagehelper
 pagehelper:
@@ -18,3 +17,6 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
   returnPageInfo: check
+
+logging:
+  config: classpath:logback.xml
