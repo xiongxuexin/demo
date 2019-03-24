@@ -1,5 +1,8 @@
 package com.xiong.demo.constants;
 
+/**
+ * redis 的 key
+ */
 public class RedisConstants {
 
     /**
