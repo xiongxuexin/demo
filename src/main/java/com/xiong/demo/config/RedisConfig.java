@@ -66,7 +66,7 @@ public class RedisConfig {
             pool.setMaxIdle(maxIdle);
             pool.setMaxWaitMillis(maxWaitMillis);
 
-            jedisCluster = new JedisCluster(nodes, commandTimeout, timeout, 6, password, pool);
+            jedisCluster = new JedisCluster(nodes, commandTimeout, timeout, 5, password, pool);
         }
         return jedisCluster;
     }
