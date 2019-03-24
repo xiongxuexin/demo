@@ -20,3 +20,4 @@ pagehelper:
 
 logging:
   config: classpath:logback.xml
+  level: debug
